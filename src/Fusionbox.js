@@ -111,7 +111,6 @@ export default class Fusionbox extends Component {
   render() {
     return (
       <Container
-        onContainerBlur={this.handleContainerBlur}
         onContainerKeyDown={this.handleContainerKeyDown}>
         <HiddenInput
           name={this.props.hiddenInputName}
@@ -204,13 +203,6 @@ export default class Fusionbox extends Component {
   handleOptionMouseMove = ({ value }) => {
     this.setState({
       hoveredOptionValue: value
-    });
-  }
-
-  handleContainerBlur = () => {
-    console.log('blur')
-    this.setState({
-      isListboxVisible: false
     });
   }
 

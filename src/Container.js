@@ -4,14 +4,12 @@ export default function Container(props) {
 
   const {
     children,
-    onContainerBlur,
     onContainerKeyDown
   } = props;
 
   return (
     <div
       className={'Fusionbox-container'}
-      onBlur={onContainerBlur}
       onKeyDown={onContainerKeyDown}
       role={'combobox'}
       style={{
