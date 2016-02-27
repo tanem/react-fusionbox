@@ -149,10 +149,6 @@ export default class Fusionbox extends Component {
     );
   }
 
-  handleOptionMouseDown = () => {
-    console.log('md')
-  }
-
   // shouldComponentUpdate(nextProps, nextState) {}
 
   storeInputRef = (input) => {
@@ -191,7 +187,6 @@ export default class Fusionbox extends Component {
   }
 
   handleOptionClick = ({ label, value }) => {
-    console.log('click')
     this.setState({
       displayedLabel: label,
       hoveredOptionValue: value,
