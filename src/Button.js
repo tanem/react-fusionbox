@@ -42,5 +42,6 @@ export default function Button(props) {
 
 Button.propTypes = {
   listboxId: PropTypes.string.isRequired,
-  onButtonClick: PropTypes.func.isRequired
+  onButtonClick: PropTypes.func.isRequired,
+  onButtonMouseDown: PropTypes.func.isRequired
 };
