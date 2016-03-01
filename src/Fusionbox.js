@@ -11,33 +11,6 @@ import Listbox from './Listbox';
 
 export default class Fusionbox extends Component {
 
-  /*
-
-  Elements:
-
-  - Container
-  - InputLabel
-  - Input
-  - ButtonLabel
-  - Button
-  - Listbox
-  - Option
-
-  Props:
-
-  - initialData
-  - initialIsListboxVisible
-  - initialSelectedValue
-
-  State:
-
-  - data
-  - displayedLabel
-  - isListboxVisible
-  - selectedValue
-
-  */
-
   static defaultProps = {
     buttonLabelText: 'Open list',
     hiddenInputName: 'fusionbox',
@@ -79,34 +52,6 @@ export default class Fusionbox extends Component {
     });
 
   }
-
-  /*
-  componentWillMount() {
-
-    const {
-      initialData,
-      initialSelectedValue
-    } = this.props;
-
-    let inputValue = '';
-    let hoveredOptionValue = '';
-
-    const initialOption = initialData.find(({ value }) => {
-      return initialSelectedValue === value;
-    });
-
-    if (initialOption) {
-      ({
-        label: inputValue,
-        value: hoveredOptionValue } = initialOption);
-    }
-
-    this.setState({
-      hoveredOption: initialOption,
-      selectedOption: initialOption
-    });
-  }
-  */
 
   render() {
     return (
