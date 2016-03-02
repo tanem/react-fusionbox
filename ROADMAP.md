@@ -7,3 +7,4 @@
 - add [react-salvager](https://github.com/tanem/react-salvager) example
 - add custom style example
 - add key handling as per [combobox](https://www.w3.org/TR/2013/WD-wai-aria-practices-20130307/#combobox) and [autocomplete](https://www.w3.org/TR/2013/WD-wai-aria-practices-20130307/#autocomplete)
+- use tj's [react-click-outside](https://github.com/tj/react-click-outside)
