@@ -6,7 +6,6 @@ export default function Option(props) {
     data,
     isHovered,
     onOptionClick,
-    onOptionMouseDown,
     onOptionMouseMove
   } = props;
 
@@ -16,7 +15,6 @@ export default function Option(props) {
         className={'Fusionbox-option'}
         href="#"
         onClick={() => onOptionClick(data)}
-        onMouseDown={() => onOptionMouseDown(data)}
         onMouseMove={() => onOptionMouseMove(data)}
         role={'option'}
         style={{

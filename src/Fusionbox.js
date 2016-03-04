@@ -85,9 +85,6 @@ export default class Fusionbox extends Component {
           id={this.props.listboxId}
           isVisible={this.state.isListboxVisible}
           onOptionClick={this.handleOptionClick}
-
-          onOptionMouseDown={this.handleOptionMouseDown}
-
           onOptionMouseMove={this.handleOptionMouseMove}
         />
       </Container>

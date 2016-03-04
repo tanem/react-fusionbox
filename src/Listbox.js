@@ -10,7 +10,6 @@ export default function Listbox(props) {
     id,
     isVisible,
     onOptionClick,
-    onOptionMouseDown,
     onOptionMouseMove
   } = props;
 
@@ -43,7 +42,6 @@ export default function Listbox(props) {
             data={option}
             isHovered={hoveredOptionValue === option.value}
             onOptionClick={onOptionClick}
-            onOptionMouseDown={onOptionMouseDown}
             onOptionMouseMove={onOptionMouseMove}
             key={i}
           />
