@@ -17,16 +17,3 @@ ReactDOM.render(
   </div>,
   document.querySelector('.simple')
 );
-
-/*
-ReactDOM.render(
-  <div>
-    <p>preselected</p>
-    <Fusionbox
-      initialData={data}
-      initialSelectedValue={'GA'}
-    />
-  </div>,
-  document.querySelector('.preselected')
-);
-*/
