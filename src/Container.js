@@ -14,8 +14,7 @@ export default function Container(props) {
       role={'combobox'}
       style={{
         position: 'relative'
-      }}
-      >
+      }}>
       {children}
     </div>
   );
