@@ -23,8 +23,8 @@ export default function Option(props) {
             'rgba(0, 0, 0, 0)',
           color: 'inherit',
           display: 'block',
-          outlineOffset: '-2',
-          padding: '3',
+          outlineOffset: -2,
+          padding: 3,
           textDecoration: 'none'
         }}
         tabIndex={-1}>
