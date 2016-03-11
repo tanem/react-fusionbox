@@ -29,7 +29,7 @@ export default function Option(props) {
         }}
         tabIndex={-1}>
         {data.label}
-        </a>
+      </a>
     </li>
   );
 

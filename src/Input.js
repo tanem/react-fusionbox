@@ -28,7 +28,8 @@ export default function Input(props) {
       }}
       tabIndex={0}
       type="text"
-      value={value} />
+      value={value}
+    />
   );
 
 }
