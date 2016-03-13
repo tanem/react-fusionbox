@@ -113,8 +113,8 @@ export default class Fusionbox extends Component {
   }
 
   handleInputChange = (event) => {
-    const inputValue = event.target.value;
-    const regex = new RegExp(escape(inputValue), 'i');
+    const displayedLabel = event.target.value;
+    const regex = new RegExp(escape(displayedLabel), 'i');
     const data = this.props.initialData
       .filter(({ label }) => regex.test(label));
     const isListboxVisible = !!data.length;
@@ -122,7 +122,7 @@ export default class Fusionbox extends Component {
 
     this.setState({
       data,
-      inputValue,
+      displayedLabel,
       isListboxVisible,
       selectedValue
     });
