@@ -284,7 +284,7 @@ export default class Fusionbox extends Component {
 
     if (key === 'Enter') {
 
-      if (isListboxVisible && hoveredOptionIndex) {
+      if (isListboxVisible && hoveredOptionIndex >= 0) {
         return this.setState({
           isListboxVisible: false,
           selectedValue: data[hoveredOptionIndex] ?
@@ -310,7 +310,7 @@ export default class Fusionbox extends Component {
 
     if (key === 'Tab') {
 
-      if (isListboxVisible && hoveredOptionIndex) {
+      if (isListboxVisible && hoveredOptionIndex >= 0) {
         return this.setState({
           isListboxVisible: false,
           selectedValue: data[hoveredOptionIndex] ?
