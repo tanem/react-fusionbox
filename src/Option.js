@@ -6,6 +6,7 @@ export default function Option(props) {
     data,
     isHovered,
     onOptionClick,
+    onOptionMouseDown,
     onOptionMouseMove
   } = props;
 
@@ -15,6 +16,7 @@ export default function Option(props) {
         className={'Fusionbox-option'}
         href="#"
         onClick={() => onOptionClick(data)}
+        onMouseDown={onOptionMouseDown}
         onMouseMove={() => onOptionMouseMove(data)}
         role={'option'}
         style={{
@@ -42,5 +44,6 @@ Option.propTypes = {
   }).isRequired,
   isHovered: PropTypes.bool.isRequired,
   onOptionClick: PropTypes.func.isRequired,
+  onOptionMouseDown: PropTypes.func.isRequired,
   onOptionMouseMove: PropTypes.func.isRequired
 };

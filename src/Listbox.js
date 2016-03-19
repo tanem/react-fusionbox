@@ -10,6 +10,7 @@ export default function Listbox(props) {
     id,
     isVisible,
     onOptionClick,
+    onOptionMouseDown,
     onOptionMouseMove
   } = props;
 
@@ -42,6 +43,7 @@ export default function Listbox(props) {
             data={option}
             isHovered={hoveredOptionValue === option.value}
             onOptionClick={onOptionClick}
+            onOptionMouseDown={onOptionMouseDown}
             onOptionMouseMove={onOptionMouseMove}
             key={i}
           />
@@ -61,5 +63,6 @@ Listbox.propTypes = {
   isVisible: PropTypes.bool.isRequired,
   hoveredOptionValue: PropTypes.string.isRequired,
   onOptionClick: PropTypes.func.isRequired,
+  onOptionMouseDown: PropTypes.func.isRequired,
   onOptionMouseMove: PropTypes.func.isRequired
 };

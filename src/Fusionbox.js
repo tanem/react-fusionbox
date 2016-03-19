@@ -85,6 +85,7 @@ export default class Fusionbox extends Component {
           id={this.props.listboxId}
           isVisible={this.state.isListboxVisible}
           onOptionClick={this.handleOptionClick}
+          onOptionMouseDown={this.handleOptionMouseDown}
           onOptionMouseMove={this.handleOptionMouseMove}
         />
       </Container>
@@ -135,6 +136,11 @@ export default class Fusionbox extends Component {
       isListboxVisible: false,
       selectedValue: value
     });
+  }
+
+  handleOptionMouseDown = (event) => {
+    event.preventDefault();
+    this.input.focus();
   }
 
   handleOptionMouseMove = ({ value }) => {
