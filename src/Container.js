@@ -4,12 +4,14 @@ export default function Container(props) {
 
   const {
     children,
+    containerRef,
     onContainerKeyDown
   } = props;
 
   return (
     <div
       className={'Fusionbox-container'}
+      ref={containerRef}
       onKeyDown={onContainerKeyDown}
       role={'combobox'}
       style={{
@@ -23,5 +25,6 @@ export default function Container(props) {
 
 Container.propTypes = {
   children: PropTypes.node.isRequired,
+  containerRef: PropTypes.func.isRequired,
   onContainerKeyDown: PropTypes.func.isRequired
 };

@@ -56,6 +56,7 @@ export default class Fusionbox extends Component {
   render() {
     return (
       <Container
+        containerRef={this.storeContainerRef}
         onContainerKeyDown={this.handleContainerKeyDown}>
         <HiddenInput
           name={this.props.hiddenInputName}
@@ -94,6 +95,20 @@ export default class Fusionbox extends Component {
 
   // shouldComponentUpdate(nextProps, nextState) {}
 
+  componentDidMount() {
+    document.addEventListener('click', this.handleDocumentClick);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('click', this.handleDocumentClick);
+  }
+
+  storeContainerRef = (container) => {
+    if (container) {
+      this.container = container;
+    }
+  }
+
   storeInputRef = (input) => {
     if (input) {
       this.input = input;
@@ -111,6 +126,14 @@ export default class Fusionbox extends Component {
   handleButtonMouseDown = (event) => {
     event.preventDefault();
     this.input.focus();
+  }
+
+  handleDocumentClick = (event) => {
+    if (!this.container.contains(event.target)) {
+      this.setState({
+        isListboxVisible: false
+      });
+    }
   }
 
   handleInputChange = (event) => {
