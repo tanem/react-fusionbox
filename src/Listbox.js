@@ -14,28 +14,30 @@ export default function Listbox(props) {
     onOptionMouseMove
   } = props;
 
+  const style = {
+    backgroundColor: '#fff',
+    borderBottom: '1px solid #a8a9ac',
+    borderLeft: '1px solid #a8a9ac',
+    borderRight: '1px solid #a8a9ac',
+    boxSizing: 'border-box',
+    display: isVisible ? 'block' : 'none',
+    listStyleType: 'none',
+    marginBottom: 0,
+    marginTop: 0,
+    paddingLeft: 0,
+    position: 'absolute',
+    top: 29,
+    width: '100%',
+    zIndex: 1
+  };
+
   return (
     <ul
       aria-expanded={isVisible}
       className={'Fusionbox-listbox'}
       id={id}
       role={'listbox'}
-      style={{
-        backgroundColor: '#fff',
-        borderBottom: '1px solid #a8a9ac',
-        borderLeft: '1px solid #a8a9ac',
-        borderRight: '1px solid #a8a9ac',
-        boxSizing: 'border-box',
-        display: isVisible ? 'block' : 'none',
-        listStyleType: 'none',
-        marginBottom: 0,
-        marginTop: 0,
-        paddingLeft: 0,
-        position: 'absolute',
-        top: 29,
-        width: '100%',
-        zIndex: 1
-      }}
+      style={style}
       tabIndex={-1}>
       {data.map((option, i) => {
         return (

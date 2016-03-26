@@ -10,6 +10,17 @@ export default function Option(props) {
     onOptionMouseMove
   } = props;
 
+  const style = {
+    backgroundColor: isHovered ?
+      'rgba(245, 245, 245, 1)' :
+      'rgba(0, 0, 0, 0)',
+    color: 'inherit',
+    display: 'block',
+    outlineOffset: -2,
+    padding: 3,
+    textDecoration: 'none'
+  };
+
   return (
     <li>
       <a
@@ -19,16 +30,7 @@ export default function Option(props) {
         onMouseDown={onOptionMouseDown}
         onMouseMove={() => onOptionMouseMove(data)}
         role={'option'}
-        style={{
-          backgroundColor: isHovered ?
-            'rgba(245, 245, 245, 1)' :
-            'rgba(0, 0, 0, 0)',
-          color: 'inherit',
-          display: 'block',
-          outlineOffset: -2,
-          padding: 3,
-          textDecoration: 'none'
-        }}
+        style={style}
         tabIndex={-1}>
         {data.label}
       </a>

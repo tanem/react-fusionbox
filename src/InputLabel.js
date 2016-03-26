@@ -16,9 +16,14 @@ export default function InputLabel(props) {
     width: 75
   };
 
+  const renderedStyle = {
+    ...defaultStyle,
+    ...style
+  };
+
   return (
     <label
-      style={{ ...defaultStyle, ...style }}>
+      style={renderedStyle}>
       <span>{text}</span>
       {children}
     </label>

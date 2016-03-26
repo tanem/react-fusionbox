@@ -8,6 +8,18 @@ export default function Input(props) {
     value
   } = props;
 
+  const style = {
+    border: '1px solid #a8a9ac',
+    boxSizing: 'border-box',
+    fontSize: 'inherit',
+    left: 0,
+    position: 'absolute',
+    top: 0,
+    height: 30,
+    padding: '3px 23px 3px 3px',
+    width: '100%'
+  };
+
   return (
     <input
       aria-autocomplete={'inline'}
@@ -15,17 +27,7 @@ export default function Input(props) {
       maxLength="255"
       onChange={onInputChange}
       ref={inputRef}
-      style={{
-        border: '1px solid #a8a9ac',
-        boxSizing: 'border-box',
-        fontSize: 'inherit',
-        left: 0,
-        position: 'absolute',
-        top: 0,
-        height: 30,
-        padding: '3px 23px 3px 3px',
-        width: '100%'
-      }}
+      style={style}
       tabIndex={0}
       type="text"
       value={value}

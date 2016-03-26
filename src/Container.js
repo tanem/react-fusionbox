@@ -8,15 +8,17 @@ export default function Container(props) {
     onContainerKeyDown
   } = props;
 
+  const style = {
+    position: 'relative'
+  };
+
   return (
     <div
       className={'Fusionbox-container'}
       ref={containerRef}
       onKeyDown={onContainerKeyDown}
       role={'combobox'}
-      style={{
-        position: 'relative'
-      }}>
+      style={style}>
       {children}
     </div>
   );
