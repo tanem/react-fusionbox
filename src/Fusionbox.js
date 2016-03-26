@@ -216,7 +216,7 @@ export default class Fusionbox extends Component {
 
       }
 
-      if (!isListboxVisible) {
+      if (!isListboxVisible && data.length) {
 
         const newOption = selectedOptionIndex - 1 < 0 ?
           data[data.length - 1] :
@@ -247,7 +247,7 @@ export default class Fusionbox extends Component {
 
       }
 
-      if (!isListboxVisible) {
+      if (!isListboxVisible && data.length) {
 
         const newOption = selectedOptionIndex + 1 >= data.length ?
           data[0] :
