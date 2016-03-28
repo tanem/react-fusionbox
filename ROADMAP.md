@@ -1,7 +1,6 @@
 # Roadmap
 
 - write unit tests
-- split into smaller components
 - add form submission example
 - add [react-salvager](https://github.com/tanem/react-salvager) example
 - add custom style example
