@@ -1,5 +1,7 @@
 # react-fusionbox
 
+> **Unmaintained.** This project is no longer maintained and the repository is archived.
+
 _WIP_
 
 ## Table of Contents
